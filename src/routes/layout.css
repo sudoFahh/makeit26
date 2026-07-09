@@ -1,3 +1,18 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+.button2 {
+	@apply border-b-5 border-black/100 bg-transparent outline-none placeholder:text-black;
+}
+
+.button3 {
+	background-color: #0c0c16;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	width: 80px;
+	height: 40px;
+	transition: 0.3s;
+}
