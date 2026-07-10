@@ -32,6 +32,7 @@
 	"dependencies": {
 		"@tsparticles/engine": "^4.3.1",
 		"@tsparticles/svelte": "^4.3.1",
+		"sv-popup": "^0.5.3",
 		"tsparticles": "^4.3.1"
 	}
 }

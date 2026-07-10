@@ -44,40 +44,44 @@
 
 <main class="bg-[#cfe7ff] flex h-screen">
 	<a href="/account"
-		><span class="material-symbols-outlined mt-2 ml-2" style="font-size: 3rem;">arrow_back</span></a
+		><span class="material-symbols-outlined mt-1 ml-1" style="font-size: 3rem;">arrow_back</span></a
 	>
 	<aside class="w-64 p-4">
-		<p class="text-4xl font-bold mt-20">Choose <br /> Seats</p>
+		<p class="text-4xl font-bold mt-10">Choose <br /> Seats</p>
 		<br />
-		<div class="flex flex-col gap-2 mt-4">
+		<div class="flex flex-col gap-2">
 			<button
-				class="w-20 h-22 overflow-hidden"
+				class="w-19 h-21 overflow-hidden"
 				onclick={() => selectCarriage('start', trainStartEl)}
 				><img
 					src={selectedCarriage === 'start' ? '/trainstart_o1.png' : '/trainstart_o.png'}
-					class="w-20"
+					class="w-19"
 					alt="yes"
 				/></button
 			>
-			<button class="w-20 h-22 overflow-hidden" onclick={() => selectCarriage('mid', trainMidEl)}
+			<button class="w-19 h-21 overflow-hidden" onclick={() => selectCarriage('mid', trainMidEl)}
 				><img
 					src={selectedCarriage === 'mid' ? '/trainmid_o1.png' : '/trainmid_o.png'}
-					class="w-20"
+					class="w-19"
 					alt="yes2"
 				/></button
 			>
-			<button class="w-20 h-22 overflow-hidden" onclick={() => selectCarriage('end', trainEndEl)}
+			<button class="w-19 h-21 overflow-hidden" onclick={() => selectCarriage('end', trainEndEl)}
 				><img
 					src={selectedCarriage === 'end' ? '/trainend_o1.png' : '/trainend_o.png'}
-					class="w-20"
+					class="w-19"
 					alt="yes3"
 				/></button
 			>
 		</div>
-		<p class="mt-10 text-4xl">Seats</p>
-		<p class="text-3xl mt-2 text-[#6366ff]">{bookedSeats.length}</p>
-		<p class="mt-15 text-4xl">Amount</p>
-		<p class="text-3xl mt-2 text-[#6366ff]">₹{bookedSeats.length * 60}</p>
+		<p class="mt-7 text-3xl">Seats</p>
+		<p class="text-2xl mt-1 text-[#6366ff]">{bookedSeats.length}</p>
+		<p class="mt-7 text-3xl">Amount</p>
+		<p class="text-2xl mt-1 text-[#6366ff]">₹{bookedSeats.length * 60}</p>
+		<img src="seats.png" class="mt-2" />
+		<button class="bg-[#6366FF] text-white py-2 px-4 rounded-4xl mt-5 ml-3 mb-2"
+			>Confirm Seats</button
+		>
 	</aside>
 	<section class="flex-1 overflow-y-auto p-4 mt-10">
 		<div class="relative w-32 ml-auto">
@@ -85,7 +89,7 @@
 				bind:this={trainStartEl}
 				src="/trainstart.png"
 				alt="TrainStart"
-				class="mt-10 rounded-xl w-32 ml-auto"
+				class="rounded-xl w-32 ml-auto"
 			/>
 			<button
 				onclick={() => toggleSeat(1)}
