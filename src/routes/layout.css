@@ -2,8 +2,12 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+main {
+	font-family: Helvetica;
+}
+
 .button2 {
-	@apply border-b-5 border-black/100 bg-transparent outline-none placeholder:text-black;
+	@apply border-b-5 border-black bg-transparent outline-none placeholder:text-black;
 }
 
 .button3 {

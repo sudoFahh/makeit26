@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Particles from './particles.svelte';
+	import { goto } from '$app/navigation';
 
 	let correctUsername = 'testuser';
 	let correctPassword = '1234';
@@ -14,11 +14,15 @@
 	let enteredUsername = $state('');
 	let enteredPassword = $state('');
 
-	function handleLogin() {
+	async function handleLogin() {
 		if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
 			label = 'Login successful!';
+			document.cookie = 'loggedIn=true; path=/; max-age=31536000';
+			await goto('/account');
 		} else if (enteredUsername === registeredUsername && enteredPassword === registeredPassword) {
 			label = 'Login successful!';
+			document.cookie = 'loggedIn=true; path=/; max-age=31536000';
+			await goto('/account');
 		} else {
 			label = 'Invalid username or password.';
 		}
