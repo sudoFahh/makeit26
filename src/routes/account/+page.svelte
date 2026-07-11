@@ -5,6 +5,58 @@
 
 	// replace with name from signup form later
 	let name = $state('User');
+	let whatDidZeUzerTypeBoss = $state('');
+	const stations = [
+		'Aether',
+		'Aproxin University',
+		'Aurora',
+		'Bizin',
+		'Brenish Hospital',
+		'Bringon Valley',
+		'Celestia',
+		'Chiemy Stadium',
+		'Cilmic Lake',
+		'Cimpic Research Centre',
+		'Crocmon City',
+		'CYN',
+		'Dowgatry City Park',
+		'Eyalki Farms',
+		'Falcon Bay',
+		'Flux City',
+		'Gen Meta',
+		'Gravity Point',
+		'Helios',
+		'Horizon',
+		'Julia Street',
+		'Khidaio',
+		'Krimbu Jail',
+		'Lumora',
+		'Mukin Palace',
+		'Nemry Art Gallery',
+		'NP',
+		'Nunmree',
+		'Orion Gate',
+		'Pulkrin Street',
+		'Quantam Bay',
+		'Shiya Stand',
+		'Snorlax',
+		'Solaris',
+		'Sontech City',
+		'Specco Lane',
+		'Spiwell',
+		'Tihar Jail',
+		'Trumpet Community College',
+		'Unimick Zenith Mall',
+		'Versova Mart',
+		'Vertex',
+		'Vizania',
+		'VVK Hospital',
+		'Xitazo Institute of Technology',
+		'Yashmin',
+		'Youtrete',
+		'Zenith',
+		'Ziggi Zoo'
+	];
 
 	onMount(() => {
 		if (!document.cookie.includes('loggedIn=true')) {
@@ -14,6 +66,19 @@
 			redirect();
 		}
 	});
+
+	function checkForStations() {
+		if (whatDidZeUzerTypeBoss.length > 0) {
+			const foundStation = stations.find(
+				(station) => station.toLowerCase() === whatDidZeUzerTypeBoss.toLowerCase()
+			);
+			if (foundStation) {
+				goto('/booking?station=' + encodeURIComponent(foundStation));
+			} else {
+				alert('Station not found. Please try again.');
+			}
+		}
+	}
 </script>
 
 <main class="p-12 bg-[#111111] text-white min-h-screen">
@@ -25,9 +90,12 @@
 		<input
 			class="flex bg-transparent rounded-4xl w-full border-none focus:outline-none focus:ring-0"
 			placeholder="Aurora"
+			bind:value={whatDidZeUzerTypeBoss}
 		/>
-		<button class="rounded-4xl bg-[#6366FF] h-9 w-11 material-symbols-outlined"
-			><a href="/booking" class="text-white">arrow_forward</a></button
+		<button
+			onclick={checkForStations}
+			class="rounded-4xl bg-[#6366FF] h-9 w-11 material-symbols-outlined"
+			><span class="text-white material-symbols-outlined">arrow_forward</span></button
 		>
 	</div>
 	<Modal>

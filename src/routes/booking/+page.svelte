@@ -1,10 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
 	const STORAGE_KEY = 'bookedSeats';
 	let bookedSeats = $state([]);
 
 	let selectedCarriage = $state('start');
+
+	// this lets thepage know ball knowledge about station
+	let station = $derived($page.url.searchParams.get('station'));
 
 	let trainStartEl = $state();
 	let trainMidEl = $state();
@@ -40,6 +45,21 @@
 		}
 		localStorage.setItem(STORAGE_KEY, JSON.stringify(bookedSeats));
 	}
+
+	function theyveDoneItBoss() {
+		if (bookedSeats.length === 0) {
+			alert('Please select at least one seat before confirming.');
+			return;
+		}
+		goto(
+			'/confirmation?station=' +
+				encodeURIComponent(station) +
+				'&seats=' +
+				bookedSeats.length.toString() +
+				'&seatno=' +
+				bookedSeats.toString()
+		);
+	}
 </script>
 
 <main class="bg-[#cfe7ff] flex h-screen">
@@ -47,7 +67,11 @@
 		><span class="material-symbols-outlined mt-1 ml-1" style="font-size: 3rem;">arrow_back</span></a
 	>
 	<aside class="w-64 p-4">
-		<p class="text-4xl font-bold mt-10">Choose <br /> Seats</p>
+		{#if !station}
+			<p class="text-4xl font-bold mt-10">Choose <br /> Seats</p>
+		{:else}
+			<p class="text-4xl font-bold mt-10">Booking for {station}</p>
+		{/if}
 		<br />
 		<div class="flex flex-col gap-2">
 			<button
@@ -79,8 +103,9 @@
 		<p class="mt-7 text-3xl">Amount</p>
 		<p class="text-2xl mt-1 text-[#6366ff]">₹{bookedSeats.length * 60}</p>
 		<img src="seats.png" class="mt-2" />
-		<button class="bg-[#6366FF] text-white py-2 px-4 rounded-4xl mt-5 ml-3 mb-2"
-			>Confirm Seats</button
+		<button
+			class="bg-[#6366FF] text-white py-2 px-4 rounded-4xl mt-5 ml-3 mb-2"
+			onclick={theyveDoneItBoss}>Book and Pay</button
 		>
 	</aside>
 	<section class="flex-1 overflow-y-auto p-4 mt-10">
