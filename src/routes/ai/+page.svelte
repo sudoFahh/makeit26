@@ -9,7 +9,7 @@
 	let loading = $state(false);
 	let chatEl = $state<HTMLDivElement>();
 
-	const ai = new GoogleGenAI({ apiKey: 'AQ.Ab8RN6K3PNf_0mqSzlKW3yq7Qfr-pliIFe3KkatFy_zshMIe_Q' });
+	const ai = new GoogleGenAI({ apiKey: 'AIzaSyAczDzxln7eOL9NN1r18olRyQiSwEGDFrE' });
 
 	async function abeGeminiChupChapBtaDe() {
 		const query = whatDidZeUzerTypeBoss2.trim();
@@ -98,6 +98,35 @@
 					class="rounded-4xl bg-[#6366FF] h-13 w-9 material-symbols-outlined shrink-0"
 					><span class="text-white material-symbols-outlined">arrow_forward</span></button
 				>
+			</div>
+			<div>
+				<div
+					class="mx-auto w-82 rounded-[10rem] h-20 border-2 border-white flex items-center justify-center"
+				>
+					<button>
+						<img src="icons/star.png" class="h-7 ml-4 mr-4" alt="chand tara" />
+					</button>
+					<button>
+						<a href="/ai">
+							<img src="icons/robot_s.png" class="h-12 ml-4 mr-4" alt="chateshgpt" />
+						</a>
+					</button>
+					<button>
+						<a href="/account">
+							<img src="icons/ghar.png" class="h-7 ml-4 mr-4" alt="ghar" />
+						</a>
+					</button>
+					<button>
+						<a href="/notfound">
+							<img src="icons/ticket.png" class="h-7 ml-4 mr-4" alt="condicter sahib" />
+						</a>
+					</button>
+					<button>
+						<a href="/profile">
+							<img src="icons/person.png" class="h-7 ml-4 mr-4" alt="banda" />
+						</a>
+					</button>
+				</div>
 			</div>
 		</div>
 	{:else}

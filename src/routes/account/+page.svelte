@@ -123,29 +123,43 @@
 					<span>09:45 AM</span>
 				</p>
 			</div>
-			<p class="text-s text-gray-400 ml-3">19 Sept • 1 Passenger • Economy</p>
-			<button class="bg-[#6366FF] text-white py-2 px-4 rounded-4xl mt-2 ml-3 mb-2"
+			<p class="text-s text-gray-400 m-4">19 Sept • 1 Passenger • Economy</p>
+			<button class="bg-[#6366FF] text-white py-2 px-4 rounded-4xl mt-2 m-4 mb-2"
 				><a href="/booking" class="text-white">Buy Ticket Now</a></button
 			>
-			<span class="ml-69 text-xs rounded-lg bg-[#6366FF] text-white p-1">20% Discount!</span>
+			<span class="ml-[74%] max-[400px]:ml-[70%] text-xs rounded-lg bg-[#6366FF] text-white p-1"
+				>20% Discount!</span
+			>
 		</div>
-		<div class="rounded-xl w-full mt-5 bg-[#222222]">
-			<div class="text-center p-3">
-				<p class="text-xl flex items-center justify-between">
-					<span>Aurora</span>
-					<span class="material-symbols-outlined">arrow_forward</span>
-					<span>Volcania</span>
-				</p>
-				<p class="flex items-center justify-between mt-1">
-					<span>09:00 AM</span>
-					<span>09:20 AM</span>
-				</p>
-			</div>
-			<p class="text-s text-gray-400 ml-3">20 Sept • 1 Passenger • Economy</p>
-			<button class="bg-[#6366FF] text-white py-2 px-4 rounded-4xl mt-2 ml-3 mb-2"
-				><a href="/booking" class="text-white">Buy Ticket Now</a></button
+
+		<div>
+			<div
+				class="rounded-[10rem] h-20 border-2 mt-[25%] border-neutral-50 flex items-center justify-center"
 			>
-			<span class="ml-69 text-xs rounded-lg bg-[#6366FF] text-white p-1">25% Discount!</span>
+				<button>
+					<img src="icons/star.png" class="h-7 ml-4 mr-4" alt="chand tara" />
+				</button>
+				<button>
+					<a href="/ai">
+						<img src="icons/robot.png" class="h-9 ml-4 mr-4" alt="chateshgpt" />
+					</a>
+				</button>
+				<button>
+					<a href="/account">
+						<img src="icons/ghar_s.png" class="h-12 ml-4 mr-4" alt="ghar" />
+					</a>
+				</button>
+				<button>
+					<a href="/notfound">
+						<img src="icons/ticket.png" class="h-7 ml-4 mr-4" alt="condicter sahib" />
+					</a>
+				</button>
+				<button>
+					<a href="/profile">
+						<img src="icons/person.png" class="h-7 ml-4 mr-4" alt="banda" />
+					</a>
+				</button>
+			</div>
 		</div>
 	</div>
 </main>

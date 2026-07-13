@@ -17,7 +17,7 @@
 </script>
 
 <main class="bg-[#111111] min-h-screen px-4 py-6 sm:px-8">
-	<div class="w-full bg-[#222222] flex flex-row items-center rounded-3xl p-4 gap-3">
+	<div class="w-full bg-[#222222] flex flex-row items-center rounded-3xl p-4 gap-3 -mt-2">
 		<div class="text-3xl shrink-0">✅</div>
 		<section class="flex-1 min-w-0">
 			<p class="text-white text-xl font-bold">You're all set!</p>
@@ -27,13 +27,9 @@
 		</section>
 	</div>
 
-	<img
-		src="/startlocation.png"
-		alt="Where you are right now"
-		class="mt-8 rounded-xl w-full h-auto"
-	/>
+	<img src="/map2.png" alt="Where you are right now" class="mt-4 rounded-xl w-full h-auto" />
 
-	<div class="relative rounded-xl w-full mt-5 bg-[#222222] overflow-hidden">
+	<div class="relative rounded-xl w-93 mx-auto mt-5 bg-[#222222] overflow-hidden">
 		<img src="ticketui.png" alt="Ticket" class="w-full h-auto" />
 
 		<span class="absolute top-3 right-3 rounded-xl bg-[#6c6ed1] p-1 font-normal text-sm text-white">
@@ -72,17 +68,44 @@
 			</p>
 		</div>
 		<div
-			class="absolute top-80 left-8 right-3 flex items-center text-center gap-7 text-white text-sm"
+			class="absolute top-75 left-8 right-3 flex items-center text-center gap-7 text-white text-sm"
 		>
 			<img src="qr-code.png" alt="QR Code" class="h-30 rounded-xl" />
 		</div>
 		<div
-			class="absolute top-82 left-50 right-3 flex items-center text-center gap-7 text-white text-sm"
+			class="absolute top-78 left-50 right-3 flex items-center text-center gap-7 text-white text-sm"
 		>
 			<p class="text-xl">
 				Booking Refrence <br /> <span class="font-bold text-3xl">VYA-7K2Q</span> <br />
 				<span class="text-sm">Show this code at the gate</span>
 			</p>
+		</div>
+	</div>
+	<div>
+		<div
+			class="mx-auto mt-4 w-82 rounded-[10rem] h-20 border-2 border-white flex items-center justify-center"
+		>
+			<button>
+				<img src="icons/star.png" class="h-7 ml-4 mr-4" alt="chand tara" />
+			</button>
+			<button>
+				<a href="/ai">
+					<img src="icons/robot.png" class="h-9 ml-4 mr-4" alt="chateshgpt" />
+				</a>
+			</button>
+			<button>
+				<a href="/account">
+					<img src="icons/ghar.png" class="h-7 ml-4 mr-4" alt="ghar" />
+				</a>
+			</button>
+			<button>
+				<img src="icons/ticket_s.png" class="h-12 ml-4 mr-4" alt="condicter sahib" />
+			</button>
+			<button>
+				<a href="/profile">
+					<img src="icons/person.png" class="h-7 ml-4 mr-4" alt="banda" />
+				</a>
+			</button>
 		</div>
 	</div>
 </main>
