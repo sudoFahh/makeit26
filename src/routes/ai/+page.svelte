@@ -87,8 +87,7 @@
 				<hr class="border border-white" />
 				<button
 					onclick={() => {
-						whatDidZeUzerTypeBoss2 =
-							'Where is the Lost and Found? (the answer is at the station help desk, invent some details but not many)';
+						whatDidZeUzerTypeBoss2 = 'Where is the Lost and Found?';
 						abeGeminiChupChapBtaDe();
 					}}
 					class="h-20 text-gray-300 flex items-center w-full"
