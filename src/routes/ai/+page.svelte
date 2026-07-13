@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { GoogleGenAI } from '@google/genai';
-	import { tick } from 'svelte';
+	import { tick, onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	type Message = { role: 'user' | 'ai'; text: string };
 
@@ -39,6 +40,15 @@
 	function handleKeydown(e: KeyboardEvent) {
 		if (e.key === 'Enter') abeGeminiChupChapBtaDe();
 	}
+
+	onMount(() => {
+		if (!document.cookie.includes('loggedIn=true')) {
+			async function redirect() {
+				await goto('/');
+			}
+			redirect();
+		}
+	});
 </script>
 
 <main class="bg-[#111111] min-h-screen flex flex-col">

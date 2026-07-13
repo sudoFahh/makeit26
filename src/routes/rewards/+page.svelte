@@ -1,5 +1,17 @@
 <script lang="ts">
 	import { Modal, Content, Trigger } from 'sv-popup';
+
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		if (!document.cookie.includes('loggedIn=true')) {
+			async function redirect() {
+				await goto('/');
+			}
+			redirect();
+		}
+	});
 </script>
 
 <main class="bg-[#111111] text-white min-h-screen p-6">

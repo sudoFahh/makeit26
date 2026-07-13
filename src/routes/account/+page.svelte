@@ -65,6 +65,10 @@
 			}
 			redirect();
 		}
+		const match = document.cookie.match(/(?:^|; )username=([^;]*)/);
+		if (match) {
+			name = match[1];
+		}
 	});
 
 	function checkForStations() {

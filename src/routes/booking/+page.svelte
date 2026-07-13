@@ -3,6 +3,15 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
+	onMount(() => {
+		if (!document.cookie.includes('loggedIn=true')) {
+			async function redirect() {
+				await goto('/');
+			}
+			redirect();
+		}
+	});
+
 	const STORAGE_KEY = 'bookedSeats';
 	let bookedSeats = $state([]);
 

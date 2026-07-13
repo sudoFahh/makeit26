@@ -1,4 +1,16 @@
 <script>
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		if (!document.cookie.includes('loggedIn=true')) {
+			async function redirect() {
+				await goto('/');
+			}
+			redirect();
+		}
+	});
+
 	import { page } from '$app/stores';
 	let station = $derived($page.url.searchParams.get('station'));
 	let seats = $derived(Number($page.url.searchParams.get('seats')));
