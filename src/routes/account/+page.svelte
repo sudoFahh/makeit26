@@ -111,7 +111,7 @@
 		</Trigger>
 	</Modal>
 	<div>
-		<div class="rounded-xl w-full mt-5 bg-[#222222]">
+		<div class="rounded-xl w-full mt-10 bg-[#222222]">
 			<div class="text-center p-3">
 				<p class="text-xl flex items-center justify-between">
 					<span>Aurora</span>
@@ -134,10 +134,12 @@
 
 		<div>
 			<div
-				class="rounded-[10rem] h-20 border-2 mt-[25%] border-neutral-50 flex items-center justify-center"
+				class="rounded-[10rem] h-20 border-2 mt-[17%] border-neutral-50 flex items-center justify-center"
 			>
 				<button>
-					<img src="icons/star.png" class="h-7 ml-4 mr-4" alt="chand tara" />
+					<a href="/rewards">
+						<img src="icons/star.png" class="h-7 ml-4 mr-4" alt="chand tara" />
+					</a>
 				</button>
 				<button>
 					<a href="/ai">

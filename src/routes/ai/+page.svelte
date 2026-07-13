@@ -104,7 +104,9 @@
 					class="mx-auto w-82 rounded-[10rem] h-20 border-2 border-white flex items-center justify-center"
 				>
 					<button>
-						<img src="icons/star.png" class="h-7 ml-4 mr-4" alt="chand tara" />
+						<a href="/rewards">
+							<img src="icons/star.png" class="h-7 ml-4 mr-4" alt="chand tara" />
+						</a>
 					</button>
 					<button>
 						<a href="/ai">
