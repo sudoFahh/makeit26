@@ -82,7 +82,7 @@
 					<div class="flex-1">
 						<input
 							type="text"
-							placeholder="Email or Phone Number"
+							placeholder="Username, Email or Phone Number"
 							bind:value={enteredUsername}
 							required
 							class="w-full border-none outline-none bg-transparent text-white text-lg placeholder-slate-300"
