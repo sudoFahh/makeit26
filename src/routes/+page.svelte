@@ -48,7 +48,9 @@
 
 {#if isLarge}
 	<div class="min-h-screen flex items-center justify-center bg-black text-white text-2xl">
-		This app cannot be opened on large screens.
+		<p>
+			The <span class="text-[#6366FF] font-bold"> Metro Nexus </span> app cannot be opened on large screens.
+		</p>
 	</div>
 {:else}
 	<div
