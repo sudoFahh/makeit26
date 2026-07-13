@@ -66,7 +66,7 @@
 				<button
 					onclick={() => {
 						whatDidZeUzerTypeBoss2 =
-							'What are some Services at Aurora Staion? (Food, Water, a Hotel etc.)';
+							'What are some Services at Aurora Station? (Food, Water, a Hotel etc.)';
 						abeGeminiChupChapBtaDe();
 					}}
 					class="h-20 text-gray-300 flex items-center w-full"
